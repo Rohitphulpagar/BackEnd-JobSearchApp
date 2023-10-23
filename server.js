@@ -3,9 +3,9 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const auth = require("../server/Route/auth");
-const login = require("../server/Route/login");
-const jobPost = require("../server/Route/job");
+const auth = require("./Route/auth");
+const login = require("./Route/login");
+const jobPost = require("./Route/job");
 const cors = require("cors");
 dotenv.config();
 
