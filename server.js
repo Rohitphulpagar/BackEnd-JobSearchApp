@@ -3,7 +3,6 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const User = require("../server/models/user");
 const auth = require("../server/Route/auth");
 const login = require("../server/Route/login");
 const jobPost = require("../server/Route/job");
