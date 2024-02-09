@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
     unique: true,
   },
   mobile: {
-    type: String,
+    type: Number,
     required: true,
     unique: true,
   },
@@ -19,9 +19,15 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  createdQuizzes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Quiz",
+    },
+  ],
 });
 
-const User = mongoose.model("User", UserSchema);
+const newUser = mongoose.model("newUser", UserSchema);
 // module.export=mongoose.model("user",UserSchema);
 
-module.exports = User;
+module.exports = newUser;

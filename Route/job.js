@@ -89,34 +89,6 @@ router.put("/job-post/:id", VerifyAuth.checkToken, async (req, res) => {
   }
 });
 
-//create route for filter based on skill and jobTitle
-//use find query to return data
-//use projection to find query (for specific collection get)
-
-// router.get("/get-jobs",async(req,res)=>{
-//     try{
-
-// //         const skillsPatternMatch="react|javascript|css|html|node.js|Express.js|MongoDB";
-// //         const positionMatch="full stack developer|frontend developer|backend developer";
-// // const getJob=await JobPost.find({
-// //    skillRequired:{$regex: new RegExp(skillsPatternMatch,"i")},
-// //    jobPosition:{$regex: new RegExp(positionMatch,"i")},  //i for react,React,REACT
-// //  },
-// //   {jobPosition:1,logoUrl:1,location:1,salary:1,skillRequired:1,remote:1,jobType:1}
-// //);
-
-// const gets=await JobPost.find();
-// res.status(200).json({
-//     status:'success',
-// message:"job list show successufully",
-// data:gets
-// })
-// }catch(error){
-// res.status(500).json({
-//     status:"failed"
-// })}
-// })
-
 router.get("/get-jobs", async (req, res) => {
   try {
     const { skills, position } = req.query;

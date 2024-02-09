@@ -15,15 +15,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: '*',
+    origin: "*",
   })
 );
 
 mongoose
-  .connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGODB_URL)
   .then(() => console.log("DB connected.."))
   .catch((error) => console.log("failed to connect mongoDB..", error));
 

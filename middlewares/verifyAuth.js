@@ -22,23 +22,3 @@ module.exports.checkToken = (req, res, next) => {
     });
   }
 };
-
-// module.exports.checkToken=(req,res,next)=>{
-//     try{
-// const token=req.header("Authorization");
-
-// if(!token){
-//     return res.status(401).json({
-//         message:"Not Authorized"
-//     });
-// }
-// const decode=jwt.verify(token,process.env.JWT_SECRETE);
-//  req.userId=decode.userId;  //global userId
-// if(!decode) return res.status(401).json({message:"Invalid token"})
-// next();
-//     }catch(error){
-//         res.status(500).json({
-//             message:"SOMETHING WENT WRONG"
-//         })
-//     }
-// }
